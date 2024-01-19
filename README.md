@@ -1,114 +1,114 @@
-# Dota2Cheat 7.35b: now with VPK decoding! 
+# Dota2Cheat 7.35b: теперь с декодированием VPK! 
 
 ![v4 image](https://github.com/ExistedGit/Dota2Cheat/assets/66470490/88dbfa94-0ba3-4d53-b355-8cb18de98d71)
 
-There weren't many open-source Dota cheats. And so I decided to fix that. Written in C++20 with love.
+В Dota было не так много читов с открытым исходным кодом. И я решил это исправить. Написано на C++20 с любовью.
 
-Some SDK bits were fully or partionally taken from [McDota](https://github.com/LWSS/McDota) by LWSS, which D2C is inspired by.
+Некоторые части SDK были полностью или частично взяты из [McDota](https://github.com/LWSS/McDota) от LWSS, которой вдохновлена D2C.
 
-Using [ImGui](https://github.com/ocornut/imgui) with DirectX 11 for the interface
+Для интерфейса используется [ImGui](https://github.com/ocornut/imgui) с DirectX 11
 
-also using [Minhook](https://github.com/TsudaKageyu/minhook) for them trampolines
+также использую [Minhook](https://github.com/TsudaKageyu/minhook) для батутов
 
-also using Google's [Protocol Buffers](https://github.com/protocolbuffers/protobuf) for net message handling
+также использую [Protocol Buffers](https://github.com/protocolbuffers/protobuf) от Google для обработки сетевых сообщений.
 
-Cheers to their wonderful creators!
+Выпьем за их замечательных создателей!
 
-# Features
-To open the cheat menu, press Insert
+# Особенности
+Чтобы открыть чит-меню, нажмите Insert
 
-WARNING! Legit features ahead, no scripts that play the game for you!
+ВНИМАНИЕ! Перед вами легальные функции, никаких скриптов, которые играют в игру за вас!
 
-* Automation:
-  * AutoAccept:
-    * Customizable delay
-  * AutoHeal with customizable health tresholds
-  * AutoMidas with customizable min XP reward
+* Автоматизация:
+  * Автоприем:
+    * Настраиваемая задержка
+  * AutoHeal с настраиваемыми порогами здоровья
+  * AutoMidas с настраиваемой минимальной наградой XP
   * Bounty rune & Aegis snatcher
-  * CastRedirection™(always casts on real hero)
-  * Mana & HP abuse
-  * AutoDodge for projectiles
-  * ~~Tome of Knowledge purchase~~ RIP on 21.04.2023. Goodbye, sweet prince.
+  * CastRedirection™ (всегда кастуется на реального героя)
+  * Злоупотребление маной и HP
+  * AutoDodge для снарядов
+  * ~~Покупка Тома Знаний~~ Умер 21.04.2023. Прощай, милый принц.
   
-* Information:
+* Информация:
   * Maphack:
-    * Teleport Tracker — draws enemy TPs on the map
-    * Particle MapHack — shows particles in FoW and identifies their source()
-  * AbilityESP™(abilities & items)
-  * Bars:
-    * Manabars
-    * HP amount displayed on healthbar
-  * Indicators
-    * Speed indicator — shows whether you are faster or slower than the enemy
-    * Kill indicator — shows if you can kill the enemy with a nuke(if your hero has one). If you can't, shows how much more health there is than the treshold.
-  * Draw circles of custom radius around your hero(e. g. to see XP receiving range)
-  * Shows point-cast spells(Sunstrike, Torrent, Light Strike Array)
+    * Teleport Tracker - рисует вражеские ТП на карте.
+    * Particle MapHack - показывает частицы в FoW и определяет их источник()
+  * AbilityESP™ (способности и предметы)
+  * Бары:
+    * Манабары
+    * Количество HP, отображаемое на панели здоровья
+  * Индикаторы
+    * Индикатор скорости - показывает, быстрее или медленнее вы врага.
+    * Индикатор убийств - показывает, можете ли вы убить врага нюком (если он есть у вашего героя). Если нет, показывает, насколько больше здоровья осталось до порога.
+  * Нарисовать круги заданного радиуса вокруг героя (например, чтобы увидеть дальность получения XP)
+  * Показывает точечные заклинания (Sunstrike, Torrent, Light Strike Array)
   * Modifier Revealer:
-    * Shows target-cast spells(Assassinate, Charge of Darkness)
-    * Shows Linken's Sphere on everyone
-    * Shows True Sight on allies and wards
-  * Customizable enemy illusion coloring
-  * Shows trajectories of enemy projectiles like Mirana's arrow and non-projectile abilities like Meat Hook
-  * ~~Visible by Enemy~~ RIP on 21.02.2023, you shall not be forgotten
+    * Показывает заклинания с целевым действием (Assassinate, Charge of Darkness)
+    * Показывает Сферу Линкена на всех.
+    * Показывает True Sight на союзниках и подопечных
+  * Настраиваемая раскраска вражеских иллюзий
+  * Показывает траектории вражеских снарядов, таких как стрела Мираны, и непроекционных способностей, таких как "Мясной крюк
+  * ~~Visible by Enemy~~ RIP 21.02.2023, ты не будешь забыт
   
-* Convars:
-  * Using ConVar spoofing to counter serverside detection mechanisms 
-  * customizable `dota_camera_distance` with proper `r_farz` and `fog_enable`(no clipping or blue fog)
-  * ~~`dota_use_particle_fow`~~ RIP too
+* Конвары:
+  * Использование подмены ConVar для борьбы с механизмами обнаружения на стороне сервера 
+  * настраиваемое `dota_camera_distance` с правильным `r_farz` и `fog_enable` (без обрезания или синего тумана)
+  * ~~`dota_use_particle_fow`~~ RIP тоже
 
-* Utility:
+* Утилиты:
   * Perfect Blink
-  * BadCastPrevention™(prevents bad BHs and RPs and chronospheres)
+  * BadCastPrevention™ (предотвращает плохие BHs, RPs и хроносферы)
 
 * Changer:
-  * Weather changing(Ash, Spring etc)
-  * River painting
-  * Unlocks emoticons
+  * Изменение погоды (пепел, весна и т.д.)
+  * Рисование реки
+  * Разблокировка смайликов
   * Dota Plus Unlocker
   * TreeChanger™
-  * Allows playing with VPK mods
+  * Позволяет играть с модами VPK
   
-* Work in progress:
+* Работа в процессе:
   * Roshan timer
 
-## Building
-You need to install the protobuf library for it to work. Install [vcpkg](https://vcpkg.io/en/getting-started.html). Navigate to the folder with vcpkg.exe. Open the console in the folder and enter the following command:
+## Сборка
+Для работы необходимо установить библиотеку protobuf. Установите [vcpkg](https://vcpkg.io/en/getting-started.html). Перейдите в папку с файлом vcpkg.exe. Откройте консоль в папке и введите следующую команду:
 
-`.\vcpkg.exe install protobuf:x64-windows-static`
+`.\vcpkg.exe install protobuf:x64-windows-static`.
 
-This will install the heavier static version of the library. 
+Это приведет к установке более тяжелой статической версии библиотеки. 
 
-Once the process completes, go to `installed/x64-windows-static`. Copy libprotobuf.lib and libprotobuf-lite.lib files from /lib to Dota2Cheat/lib. You can also copy the libs with a `d` suffix from debug/lib if you want to compile it in Debug
+Как только процесс завершится, перейдите в папку `installed/x64-windows-static`. Скопируйте файлы libprotobuf.lib и libprotobuf-lite.lib из /lib в Dota2Cheat/lib. Вы также можете скопировать либы с суффиксом `d` из debug/lib, если хотите компилировать в Debug.
 
-You also need to install the [June 2010 DirectX SDK](https://www.microsoft.com/en-us/download/details.aspx?id=6812)
+Вам также необходимо установить [June 2010 DirectX SDK](https://www.microsoft.com/en-us/download/details.aspx?id=6812).
 
-Open the project in Visual Studio and build Dota2Cheat as **Release x64**
+Откройте проект в Visual Studio и соберите Dota2Cheat как **Release x64**.
 
-## Injecting
-This cheat can be safely reinjected at any point of the game
+## Инжектирование
+Этот чит можно безопасно инжектировать в любой момент игры
 
-Build & run D2CUpdater to move/update all relevant resources to their destination in C:\Users\%user%\Documents\Dota2Cheat, then use any injector to do the job.
+Создайте и запустите D2CUpdater, чтобы переместить/обновить все необходимые ресурсы в место назначения в C:\Users\%user%\Documents\Dota2Cheat, затем используйте любой инжектор для выполнения работы.
 
-**Use at own risk** (also consider not using non-legit features that you can get reported/flagged for)
+**Используйте на свой страх и риск** (также не используйте нелегитимные функции, за которые вы можете получить сообщение/флаг)
 
-## Troubleshooting
+## Устранение неполадок
 
-If you encounter an error and want to coherently report it:
+Если вы столкнулись с ошибкой и хотите связно сообщить о ней:
 
-### Debugging
+### Отладка
 
-This method is for errors that are easily reproducible. You're meant to be playing either in the demo mode or a lobby(not on a VAC-protected server!)
-Build both the cheat and loader in Debug. Launch dota 2, then In Visual Studio Ctrl + Alt + P and select dota2.exe.
-Now that you're debugging the process, inject the cheat and trigger the error. VS will show you where the exception occurs.
+Этот метод предназначен для ошибок, которые легко воспроизвести. Вы должны играть либо в демо-режиме, либо в лобби (не на VAC-защищенном сервере!).
+Создайте чит и загрузчик в режиме отладки. Запустите dota 2, затем в Visual Studio нажмите Ctrl + Alt + P и выберите dota2.exe.
+Теперь, когда вы отлаживаете процесс, внедрите чит и вызовите ошибку. VS покажет вам, где возникает исключение.
 
-### What to do when an error appears
+### Что делать при появлении ошибки
 
-Upon an exception, examine the file and lines it happened on. In the Call Stack tab you'll be able to trace the call to the function(in case the exception place doesn't provide enough information). Screenshot all of this and then you can make an Issue here with the data.
+При возникновении исключения изучите файл и строки, на которых оно произошло. На вкладке Call Stack вы сможете проследить вызов функции (в случае, если место исключения не дает достаточной информации). Сфотографируйте все это, а затем можете создать здесь выпуск с полученными данными.
 
-# For Developers
+# Для разработчиков
 
-Check out the repo's Wiki, I add useful pieces of information about dota-specific cheat things there
+Загляните в Wiki репозитория, я добавляю туда полезную информацию о специфических для dota читерских штуках.
 
-Also has a guide on how to update it
+Также там есть руководство по обновлению.
 
-AND I also consider translating my YouGame tutorials to a human language for the sake of preservation
+И я также рассматриваю возможность перевода моих руководств по YouGame на человеческий язык ради сохранения
